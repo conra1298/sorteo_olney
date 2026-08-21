@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:pageship": "npm run build && powershell -Command \"Copy-Item -Recurse -Force dist/assets assets; Copy-Item -Force dist/index.html index.html\" && git add . && git commit -m \"deploy: update pageship bundle\" && git push origin main"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
