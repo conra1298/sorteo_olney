@@ -2,6 +2,7 @@ import React from 'react';
 import { ShieldCheck, Sparkles, FileText, Gift } from 'lucide-react';
 import { SorteoConfig } from '../types/sorteo';
 import { InstagramIcon } from './InstagramIcon';
+import logoOlney from '../assets/logo-olney.png';
 
 interface HeaderProps {
   config: SorteoConfig;
@@ -63,7 +64,7 @@ export const Header: React.FC<HeaderProps> = ({ config, onOpenLegal, onOpenGrati
       <div className="flex justify-center my-2">
         <a href="#" className="inline-block transition-transform hover:scale-105 duration-200">
           <img
-            src="/logo-olney.png"
+            src={logoOlney}
             alt={config.empresa.nombre}
             className="h-16 sm:h-20 w-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.8)]"
           />

@@ -2,6 +2,7 @@ import React from 'react';
 import { MessageCircle, ShieldCheck, FileText, Gift } from 'lucide-react';
 import { SorteoConfig } from '../types/sorteo';
 import { InstagramIcon } from './InstagramIcon';
+import logoOlney from '../assets/logo-olney.png';
 
 interface FooterProps {
   config: SorteoConfig;
@@ -17,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({ config, onOpenLegal, onOpenGrati
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-6 border-b border-olney-border/60">
           <div className="flex items-center gap-3 text-center sm:text-left">
             <img
-              src="/logo-olney.png"
+              src={logoOlney}
               alt={config.empresa.nombre}
               className="h-12 w-auto object-contain"
             />
